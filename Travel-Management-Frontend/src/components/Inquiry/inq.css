@@ -1,0 +1,303 @@
+
+ 
+* {
+	box-sizing:border-box;
+}
+.vj{
+	background-image: url('./four.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom:50px;
+	
+}
+
+table.blueTable {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  table.blueTable tbody td {
+    font-size: 13px;
+  }
+  table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table.blueTable thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+  }
+  table.blueTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+  }
+  table.blueTable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.blueTable tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #D0E4F5;
+    background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    border-top: 2px solid #444444;
+  }
+  table.blueTable tfoot td {
+    font-size: 14px;
+  }
+  table.blueTable tfoot .links {
+    text-align: right;
+  }
+  table.blueTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+
+
+
+
+
+.needs-validation{
+        
+    border-radius:25px;
+    width: 800px;
+    max-width: 100%;
+    padding:50px;
+    margin: 10px;
+    background-color: rgba(240, 240, 240, 0.4);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.needs-validation-view{
+    
+    border-radius:25px;
+    box-shadow:0 0.5px 0.5px rgba(0,0,0);
+    width: 800px;
+    max-width: 100%;
+    padding:50px;
+    padding-top: 30px;
+    margin: 10px;
+    background: blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,  rgba(240, 240, 240, 0.4) 70% , rgba(0, 2, 122, 0.7) 20%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top,  rgba(240, 240, 240, 0.4) 85%, rgba(0, 2, 122, 0.7) 20%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left,   rgba(240, 240, 240, 0.4)85%, rgba(0, 2, 122, 0.7) 20%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top,  rgba(240, 240, 240, 0.4) 65% , rgba(0, 2, 122, 0.7) 20%);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    
+}
+.oneDetail{
+    background-color:white;
+    border-radius:25px;
+    box-shadow:0 2px 2px rgba(0,0,0);
+    width: 600px;
+    max-width: 100%;
+    padding:50px;
+    margin: 10px;
+    background-color: rgba(240, 240, 240, 0.4);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+.oneDetail2{
+    background-color:rgb(87, 87, 87);
+    border-radius:5px;
+    box-shadow:0 0px 0px rgb(0, 0, 0);
+    width: 600px;
+    max-width: 100%;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgba(240, 240, 240, 0.4);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+.oneDetail3{
+    margin-top: 50px;
+    
+    background-color:white;
+    border-radius:5px;
+    box-shadow:0 0px 0px rgb(0, 0, 0);
+    width: 600px;
+    max-width: 100%;
+    padding:20px;
+    margin: 10px;
+    background: blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,  rgba(240, 240, 240, 0.4) 70% , rgba(0, 2, 122, 0.7) 20%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top,  rgba(240, 240, 240, 0.4) 85%, rgba(0, 2, 122, 0.7) 20%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left,   rgba(240, 240, 240, 0.4)85%, rgba(0, 2, 122, 0.7) 20%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top,  rgba(240, 240, 240, 0.4) 65% , rgba(0, 2, 122, 0.7) 20%);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+.oneDetail4{
+    background-color:white;
+    border-radius:5px;
+    box-shadow:0 0px 0px rgb(0, 0, 0);
+    width: 600px;
+    max-width: 100%;
+    padding:20px;
+    margin: 10px;
+    background-color: rgba(240, 240, 240, 0.4);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+.oneDetail5{
+    margin-top: 200px;
+    
+    background-color:white;
+    border-radius:5px;
+    box-shadow:0 0px 0px rgb(0, 0, 0);
+    width: 800px;
+    max-width: 100%;
+    padding:50px;
+    margin: 10px;
+    background-color: rgba(240, 240, 240, 0.4);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+.oneDetail6{
+    margin-top: 200px;
+  text-size-adjust: 5px;
+    background-color:white;
+    border-radius:5px;
+    box-shadow:0 0px 0px rgb(0, 0, 0);
+    width: 1300px;
+    max-width: 100%;
+   padding: 10px;
+    margin: 10px;
+    background-color: rgba(240, 240, 240, 0.4);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+
+}
+.hed{
+    background-color:rgba(0, 255, 0, 0.247);
+    border-radius: 5px 5px;
+    width: 600px;
+    max-width: 100%;
+    padding:5px;
+}
+.boad{
+    background-color:rgb(235, 235, 235);
+    border-radius: 0px     0px      5px 5px;           
+    width: 600px;
+    max-width: 100%;
+    height: 200px;
+    padding:5px;
+}
+
+
+
+.container1{
+    background-color: hsla(0,0%,75% ,0.7);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    border-radius:25px;
+    box-shadow:0 2px 2px rgba(0,0,0);
+    max-width: 100%;
+    padding:50px;
+    margin: 10px;
+}
+.container2{
+    background-color:white;
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    max-width: 100%;
+    padding:50px;
+    margin: 10px;
+
+}
+
+.hedad{
+    background-color:rgba(0, 255, 0, 0.247);
+    border-radius: 5px     5px      0px 0px;
+    width: 200px;
+    padding:5px;
+}
+.boadad{
+    background-color:rgb(235, 235, 235);
+    border-radius: 0px     5px      5px 5px;        
+    max-width: 100%;
+    padding:5px;
+}
+
+
+
+
+
+
+
+
+.adinqcard {
+    border-radius: 0px 0px 20px 20px ;
+    background-color: hsla(0,0%,75% ,0.7);
+  
+  }
+  
+  .adinqh {
+    border-radius: 15px 15px 0px 0px ;
+    background-color:rgba(0, 1, 80, 0.808);
+  }
+  .adinqh1 {
+    border-radius: 15px 15px 0px 0px ;
+    background-color:rgba(0, 1, 80, 0.808);
+    width: 800px;
+  }
+
+  .needs-validation12{
+        
+    border-radius:  20px ;
+    width: 800px;
+    max-width: 100%;
+    padding:50px;
+    padding-top: 30px;
+    margin: 10px;
+    
+background: blue; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,  rgba(240, 240, 240, 0.4) 85% , rgba(0, 2, 122, 0.7) 20%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top,  rgba(240, 240, 240, 0.4) 85%, rgba(0, 2, 122, 0.7) 20%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left,   rgba(240, 240, 240, 0.4)85%, rgba(0, 2, 122, 0.7) 20%); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top,  rgba(240, 240, 240, 0.4) 85% , rgba(0, 2, 122, 0.7) 20%);
+    font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    
+}
+.nam{
+   
+    color: #ffffff;
+}
+
+.adinqhq {
+  border-radius: 15px  ;
+  max-width: 250px;
+  color: #ffffff;
+  background-color:rgba(0, 1, 80, 0.808);
+  margin-left: 350px;
+  text-align: center;
+  padding: 10px;
+}

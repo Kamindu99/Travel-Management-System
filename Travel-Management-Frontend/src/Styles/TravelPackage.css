@@ -1,0 +1,500 @@
+/*book Package*/
+
+.bodyaa {
+  background-image: url("../Images/tp1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bodybb {
+  max-width: 70%;
+  padding: 15spx;
+  margin: 0 auto;
+  border-radius: 2em;
+  background-color: #b4b2b2d5;
+}
+
+.bodycc {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #222121;
+  margin-top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+/*add package*/
+#bodytbc {
+  min-height: 100%;
+  min-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-formtr {
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+  margin: 30px auto;
+  background: rgb(102, 101, 101);
+  background: linear-gradient(
+    16deg,
+    rgba(102, 101, 101, 1) 12%,
+    rgba(111, 111, 111, 1) 78%,
+    rgba(41, 41, 41, 1) 100%
+  );
+  border-radius: 10px;
+  opacity: 0.9;
+  height: 680px;
+}
+
+.form-headertr {
+  width: 100%;
+  margin: 40px auto;
+  background: rgb(16, 2, 2);
+  background: linear-gradient(
+    16deg,
+    rgba(16, 2, 2, 1) 12%,
+    rgba(111, 111, 111, 1) 78%,
+    rgba(41, 41, 41, 1) 100%
+  );
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-headertr h1 {
+  font-size: 30px;
+  text-align: center;
+  color: #2e2e2e;
+  padding: 20px 0;
+  border-bottom: 1px solid #cccccc;
+}
+
+.form-bodytr {
+  padding: 10px 40px;
+  color: #666;
+  font-size: 16px;
+}
+
+.form-grouptr {
+  margin-bottom: 20px;
+}
+
+.form-bodytr .label-title {
+  color: white;
+  font-size: 17px;
+}
+
+.form-bodytr .form-input {
+  font-size: 17px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333333;
+  text-align: left;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+}
+
+.horizontal-grouptr .left {
+  float: left;
+  width: 49%;
+}
+
+.horizontal-grouptr .right {
+  float: right;
+  width: 49%;
+}
+
+.signup-formtr .form-footer {
+  background-color: #969899;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 240px;
+  text-align: right;
+  border-top: 1px solid #cccccc;
+  clear: both;
+}
+
+.reg {
+  font-size: 21px;
+  border: 5px;
+  border-radius: 5px;
+  color: #bcf5e7;
+  cursor: pointer;
+}
+.editt {
+  font-size: 21px;
+  border: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: rgb(248, 54, 54);
+}
+.editt:hover{
+  background-color: #ff0000;
+  color: rgb(201, 200, 200);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.reg:hover {
+  background-color: #ee1818;
+  color: rgb(201, 200, 200);
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.form-bodytr a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+/*Delete paclage*/
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+.modalContainer {
+  width: 400px;
+  height: 200px;
+  border-radius: 12px;
+  background-color: rgb(245, 244, 244);
+  box-shadow: rgba(0, 0, 0, 0.637) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.ptr {
+  animation-duration: 0.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 4%;
+  }
+
+  to {
+    margin-bottom: 0%;
+  }
+}
+
+.modalContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba(146, 146, 146, 0.096);
+  border-radius: 5px;
+}
+.footera {
+  margin-right: 210px;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #000000e3;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  background-color: rgba(139, 139, 139, 0.336);
+  cursor: pointer;
+}
+
+.modalContainer .body {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  background-color: rgba(158, 158, 158, 0.11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 40px;
+  border-radius: 5px;
+}
+
+.modalContainer .footer button {
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: rgba(207, 34, 34, 0.877);
+  color: white;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  margin-left: 200px;
+  background-color: rgb(110, 110, 110);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+.Appxx {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+}
+
+.Appxx .openModalBtn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  color: white;
+  cursor: pointer;
+}
+
+.rightsearch {
+  margin-left: 75%;
+  padding-bottom: 20px;
+}
+#cardbtn {
+  width: 130px;
+  font-size: 15px;
+  margin: center;
+  margin-left: 60%;
+}
+
+#cardimg {
+  width: 100%;
+  height: 100px;
+  opacity: 0.9;
+}
+
+#by {
+  margin-block-start: 0px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  margin-block-end: 20px;
+}
+.cdbody {
+  background: rgb(103, 255, 196);
+  background: linear-gradient(
+    16deg,
+    rgba(103, 255, 196, 0.3738881657632549) 0%,
+    rgba(255, 255, 255, 0.6098432219430302) 46%,
+    rgba(255, 238, 160, 0.3373713118306706) 100%
+  );
+}
+
+.crdbody2 {
+  font-size: 14px;
+}
+.boodydetails {
+  background-color: hsl(0, 0%, 75%, 0.1);
+}
+
+.bodytravelpackage {
+  background: rgb(49, 3, 3);
+  background: linear-gradient(
+    16deg,
+    rgba(49, 3, 3, 0.2222027725048279) 0%,
+    rgba(128, 191, 98, 0.6182701882351651) 46%,
+    rgba(196, 196, 196, 0.2559106376733673) 100%
+  );
+}
+
+.infotr {
+  color: #252525;
+  margin-top:100px ;
+  margin-inline-start: 180px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+/* This pen */
+
+#cardbtn2 {
+  width: 150px;
+  font-size: 15px;
+  margin: center;
+  margin-inline-start: 240%;
+  height: 33px;
+}
+
+
+.dark {
+  background-color: #18151fda;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* Cards */
+.postcardtr {
+  flex-wrap: wrap;
+  display: flex;
+  background-image: linear-gradient(
+    -80deg,
+    rgba(249, 253, 255, 0.1),
+    transparent 50%
+  );
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 0 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+}
+
+.smalltr {
+  font-size: 80%;
+}
+
+.postcard__title {
+  font-size: 1.75rem;
+}
+
+.postcard__img {
+  max-height: 180px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.postcard__img_link {
+  display: contents;
+}
+
+.postcard__bar {
+  width: 50px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: width 0.2s ease;
+}
+
+.postcard__text {
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.postcard__preview-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 100%;
+}
+
+.postcard__tagbox {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.tag__item {
+  display: inline-block;
+  background: rgba(83, 83, 83, 0.4);
+  border-radius: 3px;
+  padding: 2.5px 10px;
+  margin: 0 5px 5px 0;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+  }
+
+  .postcard__title {
+    font-size: 2rem;
+  }
+
+  .postcard__tagbox {
+    justify-content: start;
+  }
+
+  .postcard__img {
+    max-width: 300px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .postcard__text {
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .media.postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #18151f;
+    top: -20%;
+    height: 130%;
+    width: 55px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .postcard__text {
+      padding: 2rem 3.5rem;
+    }
+
+    .postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    .postcard.light .postcard__text:before {
+      background: #e1e5ea;
+    }
+  }
+}
+
+.postcard:hover {
+  box-shadow: 0px 0px 5px 5px #6e6e6e;
+}

@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar {
+  width: 180px;
+  height: 100%;
+ background-color: #333;
+  padding: 00px 0px 0px 0px;
+  position: fixed;
+  padding-top: 10px;
+}
+
+.wrapper .sidebar h1 {
+  color: rgb(120, 147, 155);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 138px;
+}
+
+.wrapper .sidebar ul li {
+  padding: 10px 0px 10px 0px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  
+}
+
+.wrapper .sidebar ul li a {
+  color: #bdb8d7;
+  display: block;
+  padding: 6px 0px 2px 0px;
+  text-decoration: none;
+}
+
+.wrapper .sidebar ul li a .fas {
+  width: 23px;
+}
+
+.wrapper .sidebar ul li:hover {
+  background-color: #9b9b9b;
+}
+
+.wrapper .sidebar ul li:hover a {
+  color: #fff;
+}
+
+.wrapper .sidebar .social_media {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a {
+  display: block;
+  width: 40px;
+  background: #535353;
+  height: 35px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .sidebar .social_media a:hover {
+  background-color: #868686;
+}
+.wrapper .main_content {
+  width: 100%;
+ 
+}
+
+.wrapper .main_content .headera {
+  padding: 20px;
+  background-color: #333;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  position: sticky;
+}
+
+/*
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+} 
+*/
+
+.wrapper .main_content .info div {
+  margin-bottom: 20px;
+}
+
+/*footer*/
+.mainfooter {
+  color: white;
+  background-color: rgb(77, 75, 75);
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  margin-inline-start: 180px;
+  min-height: 120px;
+  
+}
+.ftr {
+  margin-inline-start: 13%;
+}
+
+.ftr li {
+  color: rgb(138, 138, 138);
+}
+.abcs li a {
+  text-decoration: none;
+  color: rgb(138, 138, 138);
+}
+
+.abcs li a:hover {
+  color: rgb(255, 246, 246);
+  font-size: 17px;
+}
+.down {
+  margin-inline-start: 25%;
+}
+.down .socl {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.down .socl a {
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #adadad;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/*headr*/
+
+.menupp {
+  list-style-type: none;
+  padding: 0;
+  background-color:rgba(255, 255, 255, 0);
+  overflow: hidden;
+  font-family: Verdana, sans-serif;
+  float: right;
+}
+
+.menupp li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 3px 35px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.menupp li a:hover {
+  color: rgb(167, 160, 160);
+}
+.actively {
+  color: rgb(116, 116, 116);
+}
+
+.header {
+  /*padding: 10px;*/
+  background-color: #333; background-size: cover;
+  height: 120px;
+  position: relative;
+}
+
+#hname {
+  font-size: 30px;
+  color:rgb(255, 255, 255);
+  font-family: "Josefin Sans", sans-serif;
+ 
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 10px;
+  padding-top: 10px;
+ 
+ 
+}
+
+#login {
+  position: absolute;
+  top: 20px;
+  left: 93.5%;
+  font-size: 50px;
+  color: rgb(218, 213, 213);
+}
+#dateandtime {
+  position: absolute;
+  top: 20px;
+  left: 80.5%;
+  font-size: 15px;
+  color: rgb(218, 213, 213);
+}
+
+#logott{
+  position: fixed;
+margin-top: 4px;
+}
+
+
+
+
+
+/*fotter models*/
+
+.ftmodal-body {
+  background-color:hsl(240,100%,35%,0.5)	;
+  border-color: #5165ff
+}
+
+.ftintro-1 {
+  font-size: 20px
+}
+
+.ftclose {
+  color: #fff
+}
+
+.ftclose:hover {
+  color: #fff
+}
+
+
+.ftbtn-primary {
+  color: #5165ff;
+  background-color: #fffaff;
+  border-color: #fffaff;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 41px;
+  padding-right: 20px;
+  padding-left: 20px
+}
+
+.gg li{
+  cursor: pointer;
+}
+.gg li:hover{
+  color: rgb(163, 185, 231);
+  font-size: 17px;
+}
+
+.servicetext a{
+  text-decoration: none;
+  color: white;
+}
+
+.custom-fade .modal-dialog {
+    transform: translateY(-10%);
+    transition: all .2s ease-out;
+}
