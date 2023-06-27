@@ -16,7 +16,7 @@ constructor(props){
 
 componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/hotelpackage/read/${id}`).then((res)=>{
       if (res.data.success){
          this.setState({
       post:res.data.HotelPackage
@@ -52,7 +52,7 @@ componentDidMount(){
 
         console.log(data)
 
-axios.post("http://localhost:8070/hotelbooking/add",data).then((res)=>{
+axios.post("https://travelmanagement.onrender.com/hotelbooking/add",data).then((res)=>{
     if(res.data.success){
         // eslint-disable-next-line no-restricted-globals
         if(confirm("Your reservation was Successfull, please select OK to pay!")){

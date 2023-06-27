@@ -75,7 +75,7 @@ export default class CreateInquiry extends Component{
 
         console.log(data)
 
-        axios.post("http://localhost:8070/inquiry/add",data).then((res) =>{
+        axios.post("https://travelmanagement.onrender.com/inquiry/add",data).then((res) =>{
            
         if(res.data.success){
             alert("You Have Successfully Created an Inquiry")

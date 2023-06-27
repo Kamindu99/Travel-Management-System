@@ -13,7 +13,7 @@ const Activities = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/activities")
+      .get("https://travelmanagement.onrender.com/activities")
       .then((res) => setPosts(res.data))
       .catch((error) => console.log(error));
   });

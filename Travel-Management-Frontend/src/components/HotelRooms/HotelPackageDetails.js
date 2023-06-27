@@ -17,7 +17,7 @@ export default class hotelpackageDetails extends Component {
 
   componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/hotelpackage/read/${id}`).then((res)=>{
       if (res.data.success){
          this.setState({
       post:res.data.HotelPackage

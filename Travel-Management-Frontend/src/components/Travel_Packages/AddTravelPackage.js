@@ -34,7 +34,7 @@ const CreatePackage = () => {
   };
 
     axios
-      .post("http://localhost:8070/travelpackages/admin/add", travelPackage)
+      .post("https://travelmanagement.onrender.com/travelpackages/admin/add", travelPackage)
       .then((res) => setMessage(res.data))
 
       .catch((err) => {

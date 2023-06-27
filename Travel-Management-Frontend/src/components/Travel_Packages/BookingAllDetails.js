@@ -18,7 +18,7 @@ class ComponentToPrint extends React.Component {
 
   retrievePosts() {
     axios
-      .get("http://localhost:8070/packagebooking/allbookings")
+      .get("https://travelmanagement.onrender.com/packagebooking/allbookings")
       .then((res) => {
         if (res.data.success) {
           this.setState({

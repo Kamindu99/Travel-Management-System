@@ -17,7 +17,7 @@ const ActivitySelect = (props) => {
   const { id } = useParams();
 
   const loadPackage = async () => {
-    const res = await axios.get(`http://localhost:8070/activities/${id}`);
+    const res = await axios.get(`https://travelmanagement.onrender.com/activities/${id}`);
     viewActivity(res.data);
   };
   useEffect(() => {
@@ -52,7 +52,7 @@ const ActivitySelect = (props) => {
       content: content,
     };
 
-    await axios.post("http://localhost:8070/activityselect/add", data);
+    await axios.post("https://travelmanagement.onrender.com/activityselect/add", data);
     alert("Activity Select Successfull. Click Ok to Pay");
     history.push(`/payment/add-activity/${props.match.params.id}`);
   };

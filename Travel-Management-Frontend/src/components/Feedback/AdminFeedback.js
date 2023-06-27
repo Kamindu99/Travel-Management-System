@@ -16,7 +16,7 @@ export default class AllFeedback extends Component {
   }
 
   retrieveFeedback() {
-    axios.get("http://localhost:8070/feedback").then((res) => {
+    axios.get("https://travelmanagement.onrender.com/feedback").then((res) => {
       if (res.data.success) {
         this.setState({
           feedback: res.data.existingFeedback,

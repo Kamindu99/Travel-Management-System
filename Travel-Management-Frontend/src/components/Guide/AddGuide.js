@@ -33,7 +33,7 @@ const AddGuide = () => {
               };
 
               axios
-                     .post("http://localhost:8070/guide/add", guide)
+                     .post("https://travelmanagement.onrender.com/guide/add", guide)
                      .then(
                             (res) => setMessage(res.data))
 

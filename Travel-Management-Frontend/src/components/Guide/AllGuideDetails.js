@@ -17,7 +17,7 @@ export default class AllGuideDetails extends Component{
   }
  
   retrieveGuide(){
-    axios.get("http://localhost:8070/guide").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/guide").then(res =>{
       if(res.data.success){
         this.setState({
           guide:res.data.existingGuide
@@ -31,7 +31,7 @@ export default class AllGuideDetails extends Component{
   onDelete = (id) => {
     // eslint-disable-next-line no-restricted-globals
    if(confirm("Are you Sure you want to delete this?")){
-    axios.delete(`http://localhost:8070/guide/delete/${id}`).then((res) => {
+    axios.delete(`https://travelmanagement.onrender.com/guide/delete/${id}`).then((res) => {
       alert("Guide Details Deleted SuccessFully!");
       this.retrieveGuide();
     })
@@ -47,7 +47,7 @@ export default class AllGuideDetails extends Component{
  
   handleSearchArea=(e)=>{
     const searchkey = e.currentTarget.value;
-    axios.get("http://localhost:8070/guide").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/guide").then(res =>{
       if(res.data.success){
         this.filterData(res.data.existingGuide,searchkey)
       }

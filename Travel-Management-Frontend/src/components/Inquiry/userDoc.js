@@ -19,7 +19,7 @@ export default class ComponentToPrint1 extends React.Component {
     componentDidMount(){
         const id = this.props.match.params.id;
         
-        axios.get(`http://localhost:8070/inquiry/${id}`).then((res) =>{
+        axios.get(`https://travelmanagement.onrender.com/inquiry/${id}`).then((res) =>{
             if(res.data.success){
                 this.setState({
                     post:res.data.post

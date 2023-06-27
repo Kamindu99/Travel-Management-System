@@ -16,7 +16,7 @@ export default function InqView (){
         e.preventDefault();
 
         const nic1 = nic;
-        const url="http://localhost:8070/inquiry/view/";
+        const url="https://travelmanagement.onrender.com/inquiry/view/";
 
      
         const res = await axios.get(url+nic1).then((res)=> {

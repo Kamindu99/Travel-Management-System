@@ -24,12 +24,12 @@ const EditEquipment = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://localhost:8070/equipment/update/${id}`, equipment);
+    await axios.put(`https://travelmanagement.onrender.com/equipment/update/${id}`, equipment);
     history.push("/equipment/admin");
   };
 
   const loadEquipment = async () => {
-    const result = await axios.get(`http://localhost:8070/equipment/get/${id}`);
+    const result = await axios.get(`https://travelmanagement.onrender.com/equipment/get/${id}`);
     setEquipment(result.data.equipment);
   };
   return (

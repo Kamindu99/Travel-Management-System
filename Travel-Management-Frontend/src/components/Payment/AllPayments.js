@@ -18,7 +18,7 @@ export default class AllPayments extends Component{
   }
 
   retrievePayments(){
-    axios.get("http://localhost:8070/payment").then(res=>{
+    axios.get("https://travelmanagement.onrender.com/payment").then(res=>{
       if(res.data.success){
         this.setState({
           payments:res.data.existingPayment

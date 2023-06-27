@@ -20,7 +20,7 @@ class ComponentToPrint extends React.Component{
   }
   
   retrievePosts(){
-    axios.get("http://localhost:8070/hotelbooking/admin").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/hotelbooking/admin").then(res =>{
       if(res.data.success){
         this.setState({
           posts:res.data.existingBooking

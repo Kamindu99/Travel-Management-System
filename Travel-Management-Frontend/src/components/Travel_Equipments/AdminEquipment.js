@@ -13,14 +13,14 @@ const AdminEquipment = () => {
     }, []);
 
     const loadEquipments = async () => {
-        const result = await axios.get("http://localhost:8070/equipment");
+        const result = await axios.get("https://travelmanagement.onrender.com/equipment");
         setEquipment(result.data);
     };
 
     const deleteEquipment = async id => {
       // eslint-disable-next-line no-restricted-globals
       if(confirm("Are you Sure you want to delete this item?")){
-        await axios.delete(`http://localhost:8070/equipment/delete/${id}`);
+        await axios.delete(`https://travelmanagement.onrender.com/equipment/delete/${id}`);
         alert ("Successfully Deleted");
         loadEquipments();
       }

@@ -11,7 +11,7 @@ const Activities = () => {
   //DELETE ACTIVITY BY ID
   const deleteActivity = (id) => {
     axios
-      .delete(`http://localhost:8070/activities/delete/${id}`)
+      .delete(`https://travelmanagement.onrender.com/activities/delete/${id}`)
       .then((res) => alert(res.data));
     setActivity(activity.filter((elem) => elem._id !== id));
   };
@@ -21,7 +21,7 @@ const Activities = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8070/activities")
+      .get("https://travelmanagement.onrender.com/activities")
       .then((res) => setPosts(res.data))
       .catch((error) => console.log(error));
   });

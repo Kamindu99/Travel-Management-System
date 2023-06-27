@@ -16,7 +16,7 @@ export default function PayView (){
         e.preventDefault();
 
         const card1 = card;
-        const url="http://localhost:8070/payment/view/";
+        const url="https://travelmanagement.onrender.com/payment/view/";
 
      
         const res = await axios.get(url+card1).then((res)=> {

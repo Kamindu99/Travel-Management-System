@@ -19,7 +19,7 @@ export default class SelectGuide extends Component{
   }
  
   retrieveGuide(){
-    axios.get("http://localhost:8070/guide").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/guide").then(res =>{
       if(res.data.success){
         this.setState({
           guide:res.data.existingGuide
@@ -39,7 +39,7 @@ export default class SelectGuide extends Component{
  
   handleSearchArea=(e)=>{
     const searchkey = e.currentTarget.value;
-    axios.get("http://localhost:8070/guide").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/guide").then(res =>{
       if(res.data.success){
         this.filterData(res.data.existingGuide,searchkey)
       }

@@ -41,7 +41,7 @@ export default class PayForActivity extends Component{
 
    componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/activities/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/activities/${id}`).then((res)=>{
          this.setState({
       activityName:res.data.aname,
       price:res.data.price,
@@ -103,7 +103,7 @@ const{activityName,price}=this.state;
 
       console.log(data)
       
-      axios.post("http://localhost:8070/payment/add",data).then((res=>{
+      axios.post("https://travelmanagement.onrender.com/payment/add",data).then((res=>{
         if(res.data.success){
           this.setState(
             alert("Payment SuccessFull. Give Us a FeedBack"),

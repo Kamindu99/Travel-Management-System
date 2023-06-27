@@ -87,7 +87,7 @@ export default class EditPayment extends Component{
       }
 
       console.log(data)
-      axios.put(`http://localhost:8070/payment/update/${id}`,data).then((res=>{
+      axios.put(`https://travelmanagement.onrender.com/payment/update/${id}`,data).then((res=>{
         if(res.data.success){
           alert("Payemt updated successfully")
           this.setState(
@@ -107,7 +107,7 @@ export default class EditPayment extends Component{
 
   componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/payment/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/payment/${id}`).then((res)=>{
         if(res.data.success){
             this.setState({
                 reference:res.data.payment.reference,

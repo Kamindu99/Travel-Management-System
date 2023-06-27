@@ -18,7 +18,7 @@ const ContactUs = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8070/contactus/add", contactus);
+    await axios.post("https://travelmanagement.onrender.com/contactus/add", contactus);
     history.push("/");
     alert(" We will reply you soon");
   };

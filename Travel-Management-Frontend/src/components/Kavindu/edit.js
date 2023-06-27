@@ -31,7 +31,7 @@ const onInputChange = e=>{
 
 const onSubmit=async e =>{
     e.preventDefault();
-    await axios.put(`http://localhost:8070/user/update/${id}`,Registers);
+    await axios.put(`https://travelmanagement.onrender.com/user/update/${id}`,Registers);
 
     history.push("/profile");
     alert("  Successful")
@@ -39,7 +39,7 @@ const onSubmit=async e =>{
 
 const loadPackage = async()=>{
    const res = await axios.get
-       (`http://localhost:8070/user/details/${id}`)
+       (`https://travelmanagement.onrender.com/user/details/${id}`)
 
        addPost(res.data.BackendData)
      }

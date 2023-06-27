@@ -20,7 +20,7 @@ const GuideRequest = ()=>{
 
 const loadGuide = async()=>{
     const res = await axios.get(
-        (`http://localhost:8070/guide/${id}`)
+        (`https://travelmanagement.onrender.com/guide/${id}`)
     );
     viewGuide(res.data.guide);
 };
@@ -75,7 +75,7 @@ useEffect(()=>{
         noofdates:noofdates
      };
 
-     await axios.post ("http://localhost:8070/guiderequest/add",data);
+     await axios.post ("https://travelmanagement.onrender.com/guiderequest/add",data);
      alert("Request sent successfully!")
      history.push("/guide/all");
     

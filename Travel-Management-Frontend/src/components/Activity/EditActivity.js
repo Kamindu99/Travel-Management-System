@@ -38,7 +38,7 @@ const EditActivity = (props) => {
 
     axios
       .put(
-        `http://localhost:8070/activities/update/${props.match.params.id}`,
+        `https://travelmanagement.onrender.com/activities/update/${props.match.params.id}`,
         formData
       )
       .then((res) => setMessage(res.data))
@@ -49,7 +49,7 @@ const EditActivity = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8070/activities/${props.match.params.id}`)
+      .get(`https://travelmanagement.onrender.com/activities/${props.match.params.id}`)
       .then((res) => [
         setActivityName(res.data.aname),
         setCategory(res.data.category),

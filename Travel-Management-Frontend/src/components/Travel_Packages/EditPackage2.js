@@ -11,7 +11,7 @@ const EditTPackage = (props) => {
 
   const loadPackage = async () => {
     const res = await axios.get(
-      `http://localhost:8070/travelpackages/admin/${id}`
+      `https://travelmanagement.onrender.com/travelpackages/admin/${id}`
     );
     viewPackage(res.data.post);
   };
@@ -62,7 +62,7 @@ const EditTPackage = (props) => {
 
     axios
       .put(
-        `http://localhost:8070/travelpackages/admin/update/${props.match.params.id}`,
+        `https://travelmanagement.onrender.com/travelpackages/admin/update/${props.match.params.id}`,
         formData
       )
       .then((res) => setMessage(res.data))
@@ -78,7 +78,7 @@ const EditTPackage = (props) => {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:8070/travelpackages/admin/${props.match.params.id}`
+        `https://travelmanagement.onrender.com/travelpackages/admin/${props.match.params.id}`
       )
       .then((res) => [
         setPackagename(res.data.post.packageName),

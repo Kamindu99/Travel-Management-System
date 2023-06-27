@@ -15,7 +15,7 @@ const GuideLogin = () => {
         e.preventDefault();
 
         const guideusername1 = guideusername;
-        const url="http://localhost:8070/guiderequest/view/";
+        const url="https://travelmanagement.onrender.com/guiderequest/view/";
 
      
         const res = await axios.get(url+guideusername1).then((res)=> {

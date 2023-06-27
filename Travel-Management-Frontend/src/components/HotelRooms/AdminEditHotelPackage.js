@@ -43,7 +43,7 @@ export default class AdminEditHotelPackage extends Component{
     
             console.log(data)
     
-    axios.put(`http://localhost:8070/hotelpackage/update/${id}`,data).then((res)=>{
+    axios.put(`https://travelmanagement.onrender.com/hotelpackage/update/${id}`,data).then((res)=>{
         if(res.data.success){
             window.location.href = "/adminhotelpackage";
             alert("Update Successfully")
@@ -57,7 +57,7 @@ export default class AdminEditHotelPackage extends Component{
 
     componentDidMount(){
         const id = this.props.match.params.id;
-        axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res)=>{
+        axios.get(`https://travelmanagement.onrender.com/hotelpackage/read/${id}`).then((res)=>{
           if (res.data.success){
              this.setState({
                 roomType:res.data.HotelPackage.roomType,

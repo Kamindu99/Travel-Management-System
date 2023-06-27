@@ -17,7 +17,7 @@ export default class HotelBookingDetails extends Component {
 
   componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/hotelbooking/read/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/hotelbooking/read/${id}`).then((res)=>{
       if (res.data.success){
          this.setState({
       post:res.data.hotelBooking
@@ -31,7 +31,7 @@ export default class HotelBookingDetails extends Component {
     if(confirm("Are you Sure you want to delete this item?")){
 
     
-    axios.delete(`http://localhost:8070/hotelbooking/delete/${id}`).then((res)=>{
+    axios.delete(`https://travelmanagement.onrender.com/hotelbooking/delete/${id}`).then((res)=>{
       alert("Delete Successfully");
       window.location.href = "/userhotelbooking/view";
       })

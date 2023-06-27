@@ -16,7 +16,7 @@ export default class adminhotelpackageDetails extends Component {
 
   componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/hotelpackage/read/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/hotelpackage/read/${id}`).then((res)=>{
       if (res.data.success){
          this.setState({
       post:res.data.HotelPackage
@@ -29,7 +29,7 @@ export default class adminhotelpackageDetails extends Component {
     // eslint-disable-next-line no-restricted-globals
     if(confirm("Are you Sure you want to delete this item?")){
 
-    axios.delete(`http://localhost:8070/hotelpackage/delete/${id}`).then((res)=>{
+    axios.delete(`https://travelmanagement.onrender.com/hotelpackage/delete/${id}`).then((res)=>{
       alert("Delete Successfully");
       window.location.href = "/adminhotelpackage";
     })

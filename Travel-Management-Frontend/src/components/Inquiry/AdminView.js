@@ -24,7 +24,7 @@ export default class AdminView extends Component{
     }
    
     retrieveInq(){
-        axios.get("http://localhost:8070/inquiry/").then(res =>{
+        axios.get("https://travelmanagement.onrender.com/inquiry/").then(res =>{
           if(res.data.success){
             this.setState({
               posts:res.data.allinq
@@ -36,7 +36,7 @@ export default class AdminView extends Component{
       }
 
       onDelete = (id) =>{
-        axios.delete(`http://localhost:8070/inquiry/delete/${id}`).then((res) =>{
+        axios.delete(`https://travelmanagement.onrender.com/inquiry/delete/${id}`).then((res) =>{
           alert("Deleted successfully");
           this.retrieveInq();
 
@@ -60,7 +60,7 @@ export default class AdminView extends Component{
       const searchkey = e.currentTarget.value;
      
    
-       axios.get("http://localhost:8070/inquiry/").then(res =>{
+       axios.get("https://travelmanagement.onrender.com/inquiry/").then(res =>{
            
            if(res.data.success){
               

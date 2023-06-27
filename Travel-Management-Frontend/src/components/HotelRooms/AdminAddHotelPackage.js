@@ -29,7 +29,7 @@ const AdminAddPackage = () => {
         };
 
         axios
-            .post("http://localhost:8070/hotelpackage/add", hotelPackage)
+            .post("https://travelmanagement.onrender.com/hotelpackage/add", hotelPackage)
             .then(
                 (res) => setMessage(res.data))
 

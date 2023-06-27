@@ -25,7 +25,7 @@ const PackageBooking = () => {
 
   const loadPackage = async () => {
     const res = await axios.get(
-      `http://localhost:8070/travelpackages/admin/${id}`
+      `https://travelmanagement.onrender.com/travelpackages/admin/${id}`
     );
     viewPackage(res.data.post);
   };
@@ -72,7 +72,7 @@ else{
       joinplace: joinplace,
     };
 
-    await axios.post("http://localhost:8070/packagebooking/add", data);
+    await axios.post("https://travelmanagement.onrender.com/packagebooking/add", data);
     alert("Booking Added Successfull. Click Ok to Pay");
     history.push(`/payment/add-package/${id}`);
   }

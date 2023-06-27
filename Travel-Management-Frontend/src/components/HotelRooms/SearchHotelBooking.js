@@ -16,7 +16,7 @@ export default function SearchBooking (){
         e.preventDefault();
 
         const email1 = email;
-        const url="http://localhost:8070/hotelbooking/view/";
+        const url="https://travelmanagement.onrender.com/hotelbooking/view/";
 
      
         const res = await axios.get(url+email1).then((res)=> {

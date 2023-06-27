@@ -19,7 +19,7 @@ export default class CardItemsT extends Component {
   }
 
   retrievePosts() {
-    axios.get("http://localhost:8070/travelpackages").then((res) => {
+    axios.get("https://travelmanagement.onrender.com/travelpackages").then((res) => {
       if (res.data.success) {
         this.setState({
           posts: res.data.existingPackage,
@@ -42,7 +42,7 @@ export default class CardItemsT extends Component {
   handleSearchArea = (e) => {
     const searchkey = e.currentTarget.value;
 
-    axios.get("http://localhost:8070/travelpackages").then((res) => {
+    axios.get("https://travelmanagement.onrender.com/travelpackages").then((res) => {
       if (res.data.success) {
         this.filterData(res.data.existingPackage, searchkey);
       }

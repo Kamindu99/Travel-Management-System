@@ -14,7 +14,7 @@ const ViewActivity = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8070/activities/${props.match.params.id}`)
+      .get(`https://travelmanagement.onrender.com/activities/${props.match.params.id}`)
       .then((res) => [
         setActivityName(res.data.aname),
         setCategory(res.data.category),

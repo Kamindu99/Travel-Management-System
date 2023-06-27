@@ -26,7 +26,7 @@ export default function AddRating(props){
         }
        else{  
         try{
-            await axios.post('http://localhost:8070/travelpackage/review', {
+            await axios.post('https://travelmanagement.onrender.com/travelpackage/review', {
                 rating,
                 packageId:props.id
             })

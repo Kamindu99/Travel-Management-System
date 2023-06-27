@@ -40,7 +40,7 @@ export default class PayForTravelPackage extends Component{
 
    componentDidMount(){
     const id = this.props.match.params.id;
-    axios.get(`http://localhost:8070/equipment/get/${id}`).then((res)=>{
+    axios.get(`https://travelmanagement.onrender.com/equipment/get/${id}`).then((res)=>{
       if (res.data.success){
          this.setState({
       ename:res.data.equipment.name,
@@ -101,7 +101,7 @@ const{ename,price}=this.state;
       }
 
       console.log(data)
-      axios.post("http://localhost:8070/payment/add",data).then((res=>{
+      axios.post("https://travelmanagement.onrender.com/payment/add",data).then((res=>{
         if(res.data.success){
           this.setState(
     

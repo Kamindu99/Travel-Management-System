@@ -16,7 +16,7 @@ export default class AllMessages extends Component {
   }
 
   retrieveContactus() {
-    axios.get("http://localhost:8070/contactus").then((res) => {
+    axios.get("https://travelmanagement.onrender.com/contactus").then((res) => {
       if (res.data.success) {
         this.setState({
           contactus: res.data.existingContactUs,

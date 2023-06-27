@@ -49,7 +49,7 @@ export default class Inqmail extends Component{
     componentDidMount(){
         const id = this.props.match.params.id;
         
-        axios.get(`http://localhost:8070/inquiry/${id}`).then((res) =>{
+        axios.get(`https://travelmanagement.onrender.com/inquiry/${id}`).then((res) =>{
             if(res.data.success){
                 this.setState({
                     _id:res.data.post._id,

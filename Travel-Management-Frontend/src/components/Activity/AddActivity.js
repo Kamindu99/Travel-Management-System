@@ -28,7 +28,7 @@ function AddActivity() {
     };
 
     axios
-      .post(`http://localhost:8070/activities/add/`, activity)
+      .post(`https://travelmanagement.onrender.com/activities/add/`, activity)
       .then((res) => setMessage(res.data))
       .catch((err) => {
         console.log(err);

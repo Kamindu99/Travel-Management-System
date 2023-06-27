@@ -15,7 +15,7 @@ export default class PaymentDetails extends Component{
     onDelete = (id)=>{
         // eslint-disable-next-line no-restricted-globals
         if(confirm("Are you Sure you want to delete your payment?")){
-     axios.delete(`http://localhost:8070/payment/delete/${id}`).then((res)=>{
+     axios.delete(`https://travelmanagement.onrender.com/payment/delete/${id}`).then((res)=>{
        alert("Delete Successfully");
       window.location.replace("/")
      })
@@ -24,7 +24,7 @@ export default class PaymentDetails extends Component{
 
     componentDidMount(){
         const id = this.props.match.params.id;
-        axios.get(`http://localhost:8070/payment/${id}`).then((res)=>{
+        axios.get(`https://travelmanagement.onrender.com/payment/${id}`).then((res)=>{
             if(res.data.success){
                 this.setState({
                     payment:res.data.payment

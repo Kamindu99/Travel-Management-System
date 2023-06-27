@@ -40,7 +40,7 @@ export default class GuideConfirm extends Component{
   
   componentDidMount(){
       const id = this.props.match.params.id;
-      axios.get(`http://localhost:8070/guiderequest/${id}`).then((res)=>{
+      axios.get(`https://travelmanagement.onrender.com/guiderequest/${id}`).then((res)=>{
           if(res.data.success){
               this.setState({
                   guide:res.data.guide

@@ -27,7 +27,7 @@ this.DisplayData();
 
 DisplayData(){  //Display All details
     
-    axios.get("http://localhost:8070/access/Details").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/access/Details").then(res =>{
         
         if(res.data.success){
             this.setState({
@@ -61,7 +61,7 @@ Handelsearch = (e) => {
    const searchkey = e.currentTarget.value;
   
 
-    axios.get("http://localhost:8070/access/Details").then(res =>{
+    axios.get("https://travelmanagement.onrender.com/access/Details").then(res =>{
         
         if(res.data.success){
            
@@ -77,7 +77,7 @@ Handelsearch = (e) => {
 
 onDelete = (id) =>{
   if(window.confirm("Confirm Delete")){
-    const url="http://localhost:8070/access/delete/";
+    const url="https://travelmanagement.onrender.com/access/delete/";
     const id1 = id;
         axios.delete(url+id1).then((res)=>{
 

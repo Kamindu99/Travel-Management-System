@@ -25,7 +25,7 @@ const AddEquipment = () => {
     };
 
     axios
-      .post("http://localhost:8070/equipment/add", equipment)
+      .post("https://travelmanagement.onrender.com/equipment/add", equipment)
       .then(
         (res) => setMessage(res.data))
 

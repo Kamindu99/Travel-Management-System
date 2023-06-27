@@ -19,7 +19,7 @@ const ViewPackage = () => {
 
   const loadPackage = async () => {
     const res = await axios.get(
-      `http://localhost:8070/travelpackages/admin/${id}`
+      `https://travelmanagement.onrender.com/travelpackages/admin/${id}`
     );
     viewPackage(res.data.post);
   };
@@ -125,7 +125,7 @@ function Modal({ setOpenModal }) {
 
   const deletepackage = async (id) => {
     await axios.delete(
-      `http://localhost:8070/travelpackages/admin/delete/${id}`
+      `https://travelmanagement.onrender.com/travelpackages/admin/delete/${id}`
     );
 
     history.push("/travelpackages/admin");

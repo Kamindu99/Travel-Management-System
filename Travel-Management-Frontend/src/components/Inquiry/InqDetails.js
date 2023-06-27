@@ -14,7 +14,7 @@ export default class InqDetails extends Component{
     componentDidMount(){
         const id = this.props.match.params.id;
         
-        axios.get(`http://localhost:8070/inquiry/${id}`).then((res) =>{
+        axios.get(`https://travelmanagement.onrender.com/inquiry/${id}`).then((res) =>{
             if(res.data.success){
                 this.setState({
                     post:res.data.post
@@ -29,7 +29,7 @@ export default class InqDetails extends Component{
     }
     onDelete = (id) =>{
    if(window.confirm('Do you want to delete your Inquiry ?')){
-        const url="http://localhost:8070/inquiry/delete/";
+        const url="https://travelmanagement.onrender.com/inquiry/delete/";
         const id1 = id;
         
             axios.delete(url+id1).then((res)=>{
