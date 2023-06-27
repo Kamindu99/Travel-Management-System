@@ -34,7 +34,7 @@ const Activity = (props) => {
         <div className="info">
           <h2>{aname}</h2>
           <img
-            src={`/uploads/${fileName}`}
+            src={`${fileName}`}
             alt="..."
             style={{ margin: "0 auto", width: "70%", display: "flex" }}
           />

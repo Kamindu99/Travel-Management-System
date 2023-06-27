@@ -64,7 +64,6 @@ render(){
     <input 
     id="search-input" 
     type="search" 
-    id="form1" 
     class="form-control" 
     placeholder="Search Equipment"
     onChange={this.handleSearchArea}  />
@@ -86,7 +85,7 @@ render(){
   
       <Card >
       <div>
-       <center> <Card.Img variant="top" src={`/uploads/${equipment.image}`} class="img-fluid rounded-start" style={{height:"200px", width:"200px"}} alt="..." id="cardimg" /></center>
+       <center> <Card.Img variant="top" src={`${equipment.image}`} class="img-fluid rounded-start" style={{height:"200px", width:"200px"}} alt="..." id="cardimg" /></center>
         <Card.Body>
         
           <Card.Title> <b>{equipment.name}</b><br/>

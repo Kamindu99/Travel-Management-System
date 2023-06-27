@@ -64,7 +64,7 @@ export default class AdminHotelBooking extends Component{
                   <section class="ad">
                     <figure class="adcard">
                     <div class="ad_card">
-                      <img class="card_img" src={`/uploads/${posts.packageImage}`}/>
+                      <img class="card_img" src={`${posts.packageImage}`}/>
                     </div>
                     <div class="ad_content">
                       <div class="card_info">

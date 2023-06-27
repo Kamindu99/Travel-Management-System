@@ -45,7 +45,7 @@ const ViewPackage = () => {
                 class="bd-placeholder-img"
                 width="100%"
                 height="70%"
-                src={`/uploads/${tpackage.packageImage}`}
+                src={`${tpackage.packageImage}`}
                 aria-label="Placeholder: Image"
                 preserveAspectRatio="xMidYMid slice"
                 role="img"
@@ -105,8 +105,7 @@ export default function DeleteTravelPackage() {
           </h1>
           <ViewPackage />
           <button
-            className="openModalBtn"
-            className="btn btn-danger"
+            className="openModalBtn btn btn-danger"
             onClick={() => {
               setOpenModal(true);
             }}

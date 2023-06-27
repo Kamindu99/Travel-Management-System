@@ -1,6 +1,5 @@
 import React from "react";
 import "../Styles/HeaderFooter.css";
-import img1 from '../Images/logoo.png'
 
 function Header() {
   return (
@@ -13,14 +12,8 @@ function Header() {
         <li> 
            
       
-         
-         
-               
-               
-              
-                {" "}
-              
-        
+  
+
             <a href="/" style={{ textDecoration: "none", color: "white" }}>
               <i class="fas fa-home"></i>Home
             </a>
@@ -99,7 +92,7 @@ function Header() {
           <div>
           <div id="logott">
               
-              <img src={img1} style={{width:"200px",height:"100px"}}/> 
+              <img src='https://www.freeiconspng.com/thumbs/travel-icon-png/plane-travel-flight-tourism-travel-icon-png-10.png' style={{width:"200px",height:"100px"}}/> 
              
            </div>
             <div id="hname">

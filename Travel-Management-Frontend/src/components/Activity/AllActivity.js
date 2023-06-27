@@ -32,7 +32,6 @@ const Activities = () => {
             <input
               id="search-input"
               type="search"
-              id="form1"
               class="form-outline form-control"
               style={{
                 width: "400px",
@@ -45,7 +44,7 @@ const Activities = () => {
               onChange={(e) => setSearch(e.target.value)}
             />
 
-            <Row xs={1} md={3} className="g-4" id="by" className="rounded">
+            <Row xs={1} md={3} className="g-4 rounded" id="by">
               {filterdActivity.map((activity) => (
                 <Col>
                   <div className="card-group py-3">
@@ -59,7 +58,7 @@ const Activities = () => {
                     >
                       <img
                         className="card-img-top"
-                        src={`/uploads/${activity.activityImage}`}
+                        src={`${activity.activityImage}`}
                         alt="..."
                         style={{
                           width: "100%",

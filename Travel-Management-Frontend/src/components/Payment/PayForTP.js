@@ -157,7 +157,7 @@ window.location.replace("/confirm/payment")
                 <hr  class="text-center mb-4"/>
                     <h4 style={{color:"hsl(0,0%,0%,0.6)"}}>{packageName}</h4>
                     <div >
-                        <div class="col-12 "><img class="img-fluid" src={`/uploads/${img}`} style={{height:"200px",width:"100%"}} /></div>
+                        <div class="col-12 "><img class="img-fluid" src={`${img}`} style={{height:"200px",width:"100%"}} /></div>
                         
                     </div>
                    

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import hotelimg from '../../Images/simple-house-logo.png'
-import luxurious from '../../Images/hotelhome.jpg'
 import '../../Styles/HotelRoomStyle.css'
 import Header from '../Header';
 import Footer from '../Footer';
@@ -60,12 +58,12 @@ export default function SearchBooking (){
         <Header/>
           <div className="info">
             <div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
-              <img src={luxurious} alt="Logo" class="shimg" />
+              <img src='https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg' alt="Logo" class="shimg" />
                 <div class="tm-header">
                   <div class="tm-header-inner">
                     <div class="row" id="bokrow">
                       <div class="col-md-6 col-12">
-                        <img src={hotelimg} alt="Logo" class="tm-site-logo" /> 
+                        <img src='https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg' alt="Logo" class="tm-site-logo" /> 
                           <div class="tm-site-text-box">
                             <h1 class="tm-site-title">My Reservation</h1>
                             <h6 class="tm-site-description" >Dream Travelers</h6>

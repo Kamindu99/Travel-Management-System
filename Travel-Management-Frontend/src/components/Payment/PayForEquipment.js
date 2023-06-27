@@ -130,7 +130,7 @@ const{ename,price}=this.state;
                 <hr  class="text-center mb-4"/>
                     <h4 style={{color:"hsl(0,0%,0%,0.6)"}}>{ename}</h4>
                     <div >
-                    <center>    <div class="col-12 "><img class="img-fluid" src={`/uploads/${img}`} style={{height:"350px",width:"65%"}} /></div></center>
+                    <center>    <div class="col-12 "><img class="img-fluid" src={`${img}`} style={{height:"350px",width:"65%"}} /></div></center>
                         
                     </div>
                    

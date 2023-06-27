@@ -42,7 +42,7 @@ const ViewActivity = (props) => {
           </div>
           <h2>{aname}</h2>
           <img
-            src={`/uploads/${fileName}`}
+            src={`${fileName}`}
             alt="..."
             style={{ margin: "0 auto", width: "60%", display: "flex" }}
           />

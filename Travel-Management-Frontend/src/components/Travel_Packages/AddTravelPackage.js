@@ -16,37 +16,25 @@ const CreatePackage = () => {
   const [vehical, setVehical] = useState("");
   const [perperson, setPerperson] = useState("");
   const [message, setMessage] = useState("");
-  const [packageImage, setFileName] = useState("");
-
-  const onChangeFile = (e) => {
-    setFileName(e.target.files[0]);
-  };
+  const [packageImage, setPackageImage] = useState("");
 
   const changeOnClick = (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("packageName", packageName);
-    formData.append("destination", destination);
-    formData.append("discription", discription);
-    formData.append("date", date);
-    formData.append("noofdays", noofdays);
-    formData.append("noofnights", noofnights);
-    formData.append("vehical", vehical);
-    formData.append("perperson", perperson);
-    formData.append("packageImage", packageImage);
-
-    setPackagename("");
-    setDestination("");
-    setDiscription("");
-    setDate("");
-    setDays("");
-    setNights("");
-    setVehical("");
-    setPerperson("");
+  let travelPackage = {
+    packageName,
+    destination,
+    discription,
+    date,
+    noofdays,
+    noofnights,
+    vehical,
+    perperson,
+    packageImage,
+  };
 
     axios
-      .post("http://localhost:8070/travelpackages/admin/add", formData)
+      .post("http://localhost:8070/travelpackages/admin/add", travelPackage)
       .then((res) => setMessage(res.data))
 
       .catch((err) => {
@@ -214,12 +202,14 @@ const CreatePackage = () => {
                   <lable class="label-title">
                     <b>Add a Image*</b>
                     <div class="mb-3">
-                      <input
-                        class="form-control"
-                        type="file"
-                        id="formFile"
-                        filename="packageImage"
-                        onChange={onChangeFile}
+                    <input
+                        type="text"
+                        name="packageImage"
+                        required="required"
+                        class="form-input"
+                        placeholder="packageImage"
+                        value={packageImage}
+                        onChange={(e) => setPackageImage(e.target.value)}
                       />
                     </div>
                   </lable>

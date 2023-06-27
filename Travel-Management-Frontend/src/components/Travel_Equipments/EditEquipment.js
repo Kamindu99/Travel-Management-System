@@ -48,7 +48,7 @@ const EditEquipment = () => {
     
     <div class="form-outline mb-2 ">
    
-    <img src={`/uploads/${image}`} alt="..."  class="img-fluid rounded-start" style={{height:"350px", width:"500px", paddingLeft:"50px"}} />
+    <img src={`${image}`} alt="..."  class="img-fluid rounded-start" style={{height:"350px", width:"500px", paddingLeft:"50px"}} />
 
    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    

@@ -54,7 +54,7 @@ export default class CardItemsT extends Component {
       <div>
         <Header />
         <div className="infotr bodytravelpackage">
-          <div className="bodytravelpackage" className="container" id="bbimg">
+          <div className="bodytravelpackage container" id="bbimg">
             <div>
               <br />
               <div class="row text-center text-lg-start">
@@ -153,7 +153,7 @@ export default class CardItemsT extends Component {
                     <input
                       id="search-input"
                       type="search"
-                      id="form1"
+                   
                       class="form-outline form-control"
                       style={{width:"400px",marginInlineStart:"29%"}}
                       placeholder="Search Package"
@@ -179,7 +179,7 @@ export default class CardItemsT extends Component {
                       <a class="postcard__img_link">
                         <img
                           class="postcard__img"
-                          src={`/uploads/${posts.packageImage}`}
+                          src={`${posts.packageImage}`}
                           alt="..."
                         />
                       </a>

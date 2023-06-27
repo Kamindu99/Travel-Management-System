@@ -1,12 +1,9 @@
-import React,{useState, useEffect} from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
-import { Card } from 'react-bootstrap';
+import React, { useEffect, useState } from "react";
 import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import pb from '../../Images/pb.jpg'
-import '../../Styles/TravelEquipment.css'
-import HeaderAdmin from '../HeaderAdmin'
+import { Link, useParams } from "react-router-dom";
+import '../../Styles/TravelEquipment.css';
+import HeaderAdmin from '../HeaderAdmin';
 
 const AdminEquipment = () => {
     const [equipments, setEquipment] = useState([]);
@@ -47,7 +44,7 @@ const AdminEquipment = () => {
 <div class="card mb-3" >
   <div class="row g-0">
     <div class="col-md-2"><br/>
-      <img src={`/uploads/${equipment.image}`} alt="..."  class="img-fluid rounded-start" style={{height:"200px", width:"200px", paddingRight:"5px"}} />
+      <img src={`${equipment.image}`} alt="..."  class="img-fluid rounded-start" style={{height:"200px", width:"200px", paddingRight:"5px"}} />
     </div>
     <div class="col-md-10">
       <div class="card-body"> <br/>

@@ -69,7 +69,6 @@ export default class AllGuideDetails extends Component{
                                 <input 
                                     id="search-input" 
                                     type="search" 
-                                    id="form1" 
                                     className="form-control" 
                                     placeholder="Search Guide"
                                     onChange={this.handleSearchArea}  />
@@ -111,7 +110,7 @@ export default class AllGuideDetails extends Component{
                                         <tr key={index}>
                                             <th scope="row">{index+1}</th>
                                                 <td className="text-center">
-                                                    <img src = {`/uploads/${guide.guideImage}`} alt = " " style = {{width : "80%" , minHeight : "70%"}}/>
+                                                    <img src = {`${guide.guideImage}`} alt = " " style = {{width : "80%" , minHeight : "70%"}}/>
                                                 </td>
                                                 <td>{guide.name}</td>
                                                 <td>{guide.address}</td>

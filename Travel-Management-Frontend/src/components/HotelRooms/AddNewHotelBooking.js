@@ -1,11 +1,9 @@
-import React, {Component } from 'react';
 import axios from 'axios';
-import '../../Styles/HotelRoomStyle.css';
-import DatePicker from "react-datepicker";
+import React, { Component } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
-import Header from '../Header';
+import '../../Styles/HotelRoomStyle.css';
 import Footer from '../Footer';
-
+import Header from '../Header';
 
 export default class AddNewHotelBooking extends Component{
 

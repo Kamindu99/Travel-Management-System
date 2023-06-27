@@ -142,7 +142,7 @@ const EditTPackage = (props) => {
                     class="bd-placeholder-img"
                     width="100%"
                     height="70%"
-                    src={`/uploads/${tpackage.packageImage}`}
+                    src={`${tpackage.packageImage}`}
                     aria-label="Placeholder: Image"
                     preserveAspectRatio="xMidYMid slice"
                     role="img"

@@ -13,32 +13,22 @@ function AddActivity() {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [message, setMessage] = useState("");
-  const [fileName, setFileName] = useState("");
-
-  const onChangeFile = (e) => {
-    setFileName(e.target.files[0]);
-  };
+  const [activityImage, setActivityImage] = useState("");
 
   const changeOnClick = (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-
-    formData.append("aname", aname);
-    formData.append("category", category);
-    formData.append("mindescription", mindescription);
-    formData.append("description", description);
-    formData.append("price", price);
-    formData.append("activityImage", fileName);
-
-    setActivityName("");
-    setCategory("");
-    setMindescription("");
-    setDescription("");
-    setPrice("");
+    let activity = {
+      aname,
+      category,
+      mindescription,
+      description,
+      price,
+      activityImage,
+    };
 
     axios
-      .post(`http://localhost:8070/activities/add/`, formData)
+      .post(`http://localhost:8070/activities/add/`, activity)
       .then((res) => setMessage(res.data))
       .catch((err) => {
         console.log(err);
@@ -124,12 +114,13 @@ function AddActivity() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="file">Choose activity image</label>
+                  <label htmlFor="file">Enter Activity image URL</label>
                   <input
-                    type="file"
-                    filename="activityImage"
-                    className="form-control-file"
-                    onChange={onChangeFile}
+                    type="text"
+                    value={activityImage}
+                    onChange={(e) => setActivityImage(e.target.value)}
+                    className="form-control"
+                    placeholder="Activity Image"
                   />
                 </div>
 

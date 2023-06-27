@@ -1,49 +1,41 @@
 import React, { Component } from "react";
 import "../../Styles/Stylehome.css";
-
-import imag1 from "../../Images/z1.jpg";
-import imag2 from "../../Images/z2.jpg";
-import imag3 from "../../Images/z3.jpg";
-import imag4 from "../../Images/z4.jpg";
-import imag5 from "../../Images/z5.jpg";
-import imag6 from "../../Images/z6.jpg";
-import imag7 from "../../Images/z7.jpg";
 import Header from "../Header";
 import Footer from "../Footer";
 
 const data = [
   {
-    src: imag1,
+    src: 'https://wwwnc.cdc.gov/travel/images/travel-industry-air.jpg',
     caption: "Sri Lanka",
   },
 
   {
-    src: imag2,
+    src: 'https://www.hl.co.uk/__data/assets/image/0011/15985712/varieties/940.jpg',
     caption: "Unawatuna Beach",
   },
 
   {
-    src: imag3,
+    src: 'https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg',
     caption: "Dabulla Temple",
   },
 
   {
-    src: imag4,
+    src: 'https://wwwnc.cdc.gov/travel/images/travel-industry-air.jpg',
     caption: "Nine Arch Bridge",
   },
 
   {
-    src: imag5,
+    src: 'https://wwwnc.cdc.gov/travel/images/travel-industry-air.jpg',
     caption: "Yala National Park",
   },
 
   {
-    src: imag6,
+    src: 'https://wwwnc.cdc.gov/travel/images/travel-industry-air.jpg',
     caption: "Jungle Beach",
   },
 
   {
-    src: imag7,
+    src: 'https://wwwnc.cdc.gov/travel/images/travel-industry-air.jpg',
     caption: "Sigiriya",
   },
 ];

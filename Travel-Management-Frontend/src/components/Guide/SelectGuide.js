@@ -63,7 +63,6 @@ export default class SelectGuide extends Component{
                                 <input 
                                 id="search-input" 
                                 type="search" 
-                                id="form1"
                                 className="form-control" 
                                 placeholder="Search Guide"
                                 onChange={this.handleSearchArea}  />
@@ -97,7 +96,7 @@ export default class SelectGuide extends Component{
                                                 <div class="col-lg-4">
                                                     <div class="card-c shadow-sm">
                                                         <div class="card-header bg-transparent text-center">
-                                                            <img class="profile_img" src = {`/uploads/${guide.guideImage}`} alt = "..." 
+                                                            <img class="profile_img" src = {`${guide.guideImage}`} alt = "..." 
                                                             style = {{width:200, height:200}}/> 
                                                             <h4>{guide.name}</h4>
                                                             <h5 class="mb-0"><strong class="pr-1">Travel Guide</strong></h5>

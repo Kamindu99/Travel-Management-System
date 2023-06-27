@@ -56,7 +56,7 @@ render(){
                       <div class="row" id="bokrow">
                         <div class="col-md-6">
                           <div class="mu-about-left">
-                            <img class="detailsimg" src={`/uploads/${packageImage}`} alt="Men Speaker"/>
+                            <img class="detailsimg" src={`${packageImage}`} alt="Men Speaker"/>
                           </div>
                         </div>
                         <div class="col-md-6">

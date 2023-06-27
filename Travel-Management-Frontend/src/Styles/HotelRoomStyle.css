@@ -142,7 +142,7 @@
 
 
 .hero-image {
-  background-image: url("../Images/dolly.jpg");
+  background-image: url("https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg");
   background-color: #cccccc;
   width: 100%;
   min-height: 500px;
@@ -317,7 +317,7 @@
 
 #booking {
 	font-family: 'Montserrat', sans-serif;
-	background-image: url('../Images/form.jpg');
+	background-image: url('https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg');
 	background-size: cover;
 	background-position: center;
 }

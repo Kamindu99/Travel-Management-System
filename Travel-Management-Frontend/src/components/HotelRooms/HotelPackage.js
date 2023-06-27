@@ -1,7 +1,5 @@
 import React, {Component } from 'react';
 import axios from 'axios';
-import hotelimg from '../../Images/simple-house-logo.png'
-import luxurious from '../../Images/hotelhome.jpg'
 import { Card } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
@@ -66,12 +64,12 @@ export default class hotelpackage extends Component{
           <Header/>
             <div className="info">
               <div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
-                <img src={luxurious} alt="Logo" class="shimg" />
+                <img src="https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg" alt="Logo" class="shimg" />
                   <div class="tm-header">
                     <div class="tm-header-inner">
                       <div class="row" id="bokrow">
                         <div class="col-md-6 col-12">
-                          <img src={hotelimg} alt="Logo" class="tm-site-logo"/> 
+                          <img src='https://www.livemint.com/lm-img/img/2023/04/21/600x338/Air_travel_1682103021468_1682103021608.jpg' alt="Logo" class="tm-site-logo"/> 
                             <div class="tm-site-text-box">
                               <h1 class="tm-site-title" style={{fontFamily: "Calibri"}}>Rooms</h1>
                               <div className="col-lg-3 mt-2 mb-2">
@@ -105,7 +103,7 @@ export default class hotelpackage extends Component{
                     <Col>
                       <Card class="crdboder" style={{borderColor:"black"}}>
                         <div  class="crdboder">
-                          <Card.Img className="packageimg" variant="top" src={`/uploads/${posts.packageImage}`} id="cardimg" />
+                          <Card.Img className="packageimg" variant="top" src={`${posts.packageImage}`} id="cardimg" />
                             <Card.Body>
                               <Card.Title class="tm-gallery-title">
                                 {posts.roomType}

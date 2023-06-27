@@ -82,7 +82,7 @@ export default class PackageDetails extends Component {
               <img
                 style={{ height: "580px" }}
                 class="card-img-top"
-                src={`/uploads/${packageImage}`}
+                src={`${packageImage}`}
                 alt="..."
               />
               <div class="card-body" style={{ backgroundColor: "#DDE8E8" }}>
