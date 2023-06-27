@@ -189,7 +189,7 @@ export default class AdminView extends Component{
                      <br/>
 
                       <a href={`/adminDet/${posts._id}`} style={{textDecoration:'none'}}>
-                      <button className="btn btn-dark" type="button" style={{margintop:'15px'}} style={{ marginInlineStart: "70%" }} >
+                      <button className="btn btn-dark" type="button" style={{margintop:'15px',marginInlineStart: "70%"}}  >
                       <i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp; View Inquiry
                     </button>
                  </a>
