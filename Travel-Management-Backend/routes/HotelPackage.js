@@ -1,29 +1,15 @@
 const express = require('express');
 const HotelPackage = require('../models/HotelPackage');
-const multer = require("multer")
 const router =express.Router();
 
-
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Travel-management-Frontend/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/add', upload.single("packageImage") ,(req,res)=>{
+router.post('/add' , (req,res)=>{
     const newHotelPackage=new HotelPackage({
         roomType:req.body.roomType,
         details:req.body.details,
         price:req.body.price,
         size:req.body.size,
         maxCapacity:req.body.maxCapacity,
-        packageImage:req.file.originalname,
+        packageImage:req.body.packageImage
     });
     newHotelPackage
     .save()

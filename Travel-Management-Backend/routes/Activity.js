@@ -1,18 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const multer = require("multer")
 const Activities = require('../models/Activity');
-
-const storage = multer.diskStorage({
-    destination: (req, file, callback) => {
-        callback(null, "../Travel-management-Frontend/public/uploads/");
-    },
-    filename: (req, file, callback) => {
-        callback(null, file.originalname);
-    }
-})
-
-const upload = multer({storage: storage});
 
 //REQUEST GET ALL ACTIVITIES
 router.get('/', (req, res) => {
@@ -22,14 +10,14 @@ router.get('/', (req, res) => {
 });
 
 //REQUEST ADD NEW ACTIVITIES
-router.post('/add', upload.single("activityImage"), (req, res) => {
+router.post('/add', (req, res) => {
     const newActivity = new Activities({
         aname: req.body.aname,
         category: req.body.category,
         mindescription: req.body.mindescription,
         description: req.body.description,
         price: req.body.price,
-        activityImage: req.file.originalname,
+        activityImage: req.body.activityImage
     });
 
     newActivity
@@ -47,7 +35,7 @@ router.get("/:id", (req, res) => {
 });
 
 //REQUEST FIND ACTIVITY BY ID AND UPDATE
-router.put('/update/:id',  upload.single("activityImage"), (req, res) => {
+router.put('/update/:id', (req, res) => {
     Activities.findById(req.params.id)
     .then(activity => {
         activity.aname = req.body.aname;
@@ -55,7 +43,7 @@ router.put('/update/:id',  upload.single("activityImage"), (req, res) => {
         activity.mindescription = req.body.mindescription;
         activity.description = req.body.description;
         activity.price = req.body.price;
-        activity.activityImage = req.file.originalname
+        activity.activityImage = req.body.activityImage;
 
         activity
             .save()

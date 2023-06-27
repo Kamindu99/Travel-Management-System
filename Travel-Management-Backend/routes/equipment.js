@@ -1,25 +1,12 @@
 const router = require("express").Router();
 let Equipment = require("../models/Equipment");
-const multer = require("multer")
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Travel-management-Frontend/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/add', upload.single("image") ,(req,res)=>{
+router.post('/add',(req,res)=>{
     const newEquipment = new Equipment({
         name:req.body.name,
         description:req.body.description,
         price:req.body.price,
-        image:req.file.originalname,
+        image:req.body.image
     });
     
     newEquipment
@@ -42,12 +29,13 @@ router.route("/").get((req,res)=>{
 
 router.route("/update/:id").put(async (req, res)=>{
     let equipmentID = req.params.id;
-    const {name, description, price} = req.body;
+    const {name, description, price,image} = req.body;
 
     const updateEquipment = {
         name,
         description,
-        price
+        price,
+        image
     }
 
     const update = await Equipment.findByIdAndUpdate(equipmentID, updateEquipment)

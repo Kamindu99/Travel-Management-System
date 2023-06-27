@@ -1,22 +1,10 @@
 const express = require('express');
 const TravelPackage = require('../models/travelpackages');
 const ReviewData = require('../models/TravelPackageRating')
-const multer = require("multer")
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Travel-management-Frontend/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
 
-const upload=multer({storage:storage});
-
-
-router.post('/admin/add', upload.single("packageImage") ,(req,res)=>{
+router.post('/admin/add' , (req,res)=>{
     const newTravelPackage=new TravelPackage({
         packageName:req.body.packageName,
         destination:req.body.destination,
@@ -26,7 +14,7 @@ router.post('/admin/add', upload.single("packageImage") ,(req,res)=>{
         noofnights:req.body.noofnights, 
         vehical:req.body.vehical,
         perperson:req.body.perperson,
-        packageImage:req.file.originalname,
+        packageImage:req.body.packageImage
     });
     newTravelPackage
     .save()
@@ -91,7 +79,7 @@ router.get('/admin/:id',(req,res)=>{
     });
 });
 
-router.put('/admin/update/:id' , upload.single("packageImage"),(req,res)=>{
+router.put('/admin/update/:id' ,(req,res)=>{
     TravelPackage.findByIdAndUpdate(req.params.id)
     .then((package )=> {
         package.packageName=req.body.packageName;
@@ -102,8 +90,8 @@ router.put('/admin/update/:id' , upload.single("packageImage"),(req,res)=>{
         package.noofnights=req.body.noofnights; 
         package.vehical=req.body.vehical;
         package.perperson=req.body.perperson;
+        package.packageImage=req.body.packageImage;
         
-
         package
             .save()
             .then(() => res.json("The Package is UPDATED successfully"))

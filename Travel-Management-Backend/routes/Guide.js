@@ -1,22 +1,9 @@
 const express = require('express');
-const multer = require("multer")
 const Guide = require('../models/Guide');
 
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../Travel-management-Frontend/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
-
-const upload=multer({storage:storage});
-
-
-router.post('/add', upload.single("guideImage") ,(req,res)=>{
+router.post('/add' , (req,res)=>{
     const newGuide = new Guide({
         name: req.body.name,
         address: req.body.address,
@@ -25,7 +12,7 @@ router.post('/add', upload.single("guideImage") ,(req,res)=>{
         phone: req.body.phone,
         username: req.body.username,
         password: req.body.password,
-        guideImage: req.file.originalname,  
+        guideImage: req.body.guideImage
     });
     newGuide
     .save()
@@ -71,6 +58,7 @@ router.put('/update/:id', (req,res)=>{
         guide.phone = req.body.phone;
         guide.username = req.body.username;
         guide.password = req.body.password;
+        guide.guideImage = req.body.guideImage;
 
         guide
         .save()
