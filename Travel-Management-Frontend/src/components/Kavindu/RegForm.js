@@ -86,7 +86,7 @@ export default function RegisterUser({ }) {
 			);
 			console.log(data)
 			localStorage.setItem("userInfo", JSON.stringify(data));
-
+			alert("Login Successfull");
 			history.push('/user-account');
 
 			setLoding(false);
