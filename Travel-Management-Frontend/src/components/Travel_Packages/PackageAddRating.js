@@ -1,68 +1,60 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import Reactstars from "react-rating-stars-component";
 import axios from "axios";
-import { Form} from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 
-export default function AddRating(props){
+export default function AddRating(props) {
 
-  const [validated, setValidated] = useState(false);
+  console.log(props.id);
 
-    const[rating, setRating] =useState(0)
+  const [rating, setRating] = useState(0)
 
-    const ratingChanged = (rating)=>{
-       setRating(rating)
-         };
-         
-         console.log(ratingChanged);
+  const ratingChanged = (rating) => {
+    setRating(rating)
+  };
+  
+  const onSubmit = (e) => {
+    e.preventDefault();
 
-         
-         const onSubmit = async (e) => {
+    let startRating = {
+      rating,
+      packageId: props.id
+    };
 
-          const form = e.currentTarget;
-          if (form.checkValidity() === false) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-       else{  
-        try{
-            await axios.post('https://travelmanagement.onrender.com/travelpackage/review', {
-                rating,
-                packageId:props.id
-            })
-            alert(`ThankYou! You have given ${rating} star rating for us.`);
-            window.location.replace(`/travelpackages/travelpackage/${props.id}`)
-            
-         }catch (error){
-          alert("Please fill this field");
-           }
-          }
-          setValidated(true);
-        };
-        
+    axios.post('https://travelmanagement.onrender.com/travelpackage/review', startRating)
+      .then((res) => console.log(res.data))
 
-return(
-      
-<div className="container">  
-<div className="app">
- <div>
+      .catch((err) => {
+        alert("Please fill this field");
+      });
+      window.location.replace(`/travelpackages/travelpackage/${props.id}`)
+    alert(`ThankYou! You have given ${rating} star rating for us.`);
+  };
 
- <center>   
- <Form noValidate validated={validated} onSubmit={(e) => onSubmit(e)}>
-    <div className="mb-3" >
-    
-    
-    <div className="rating" >
-           <Reactstars size={85} value={rating}   onChange={ratingChanged}/>
+
+  return (
+
+    <div className="container">
+      <div className="app">
+        <div>
+
+          <center>
+            <Form onSubmit={(e) => onSubmit(e)}>
+              <div className="mb-3" >
+
+
+                <div className="rating" >
+                  <Reactstars size={85} value={rating} onChange={ratingChanged} />
+                </div>
+
+              </div>
+
+              <button className="btn btn-success" type="submit">Give Rating</button><hr />
+            </Form>
+          </center>
+        </div>
+      </div>
     </div>
- 
- </div>
-
-<button className="btn btn-success">Give Rating</button><hr/>
-</Form>
-</center>
-</div>
-</div>
-</div>
-)
+  )
 }

@@ -16,40 +16,27 @@ const EditPackage = (props) => {
   const [vehical, setVehical] = useState("");
   const [perperson, setPerperson] = useState("");
   const [message, setMessage] = useState("");
-  const [packageImage, setFileName] = useState("");
-
-  const onChangeFile = (e) => {
-    setFileName(e.target.files[0]);
-  };
+  const [packageImage, setPackageImage] = useState("");
 
   const changeOnClick = (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append("packageName", packageName);
-    formData.append("destination", destination);
-    formData.append("discription", discription);
-    formData.append("date", date);
-    formData.append("noofdays", noofdays);
-    formData.append("noofnights", noofnights);
-    formData.append("vehical", vehical);
-    formData.append("perperson", perperson);
-    formData.append("packageImage", packageImage);
-
-    setPackagename("");
-    setDestination("");
-    setDiscription("");
-    setDate("");
-    setDays("");
-    setNights("");
-    setVehical("");
-    setPerperson("");
-    setFileName("");
+    let updatePackage = {
+      packageName,
+      destination,
+      discription,
+      date,
+      noofdays,
+      noofnights,
+      vehical,
+      perperson,
+      packageImage
+    }
 
     axios
       .put(
         `https://travelmanagement.onrender.com/travelpackages/admin/update/${props.match.params.id}`,
-        formData
+        updatePackage
       )
       .then((res) => setMessage(res.data))
       .catch((err) => {
@@ -74,7 +61,7 @@ const EditPackage = (props) => {
         setNights(res.data.post.noofnights),
         setVehical(res.data.post.vehical),
         setPerperson(res.data.post.perperson),
-        setFileName(res.data.post.packageImage),
+        setPackageImage(res.data.post.packageImage),
       ])
       .catch((error) => console.log(error));
   }, []);
@@ -238,12 +225,15 @@ const EditPackage = (props) => {
                   <lable class="label-title">
                     <b>Edit Image*</b>
                     <div class="mb-3">
+                     
                       <input
-                        class="form-control"
-                        type="file"
-                        id="formFile"
-                        filename="packageImage"
-                        onChange={onChangeFile}
+                        type="text"
+                        name="packageImage"
+                        required="required"
+                        class="form-input"
+                        placeholder="Package Image"
+                        value={packageImage}
+                        onChange={(e) => setPackageImage(e.target.value)}
                       />
                     </div>
                   </lable>

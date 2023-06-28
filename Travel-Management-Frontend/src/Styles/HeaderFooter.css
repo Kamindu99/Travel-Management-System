@@ -4,7 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: 'Gill Sans', 'Nunito','Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Nunito', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .wrapper {
@@ -15,7 +15,7 @@
 .wrapper .sidebar {
   width: 180px;
   height: 100%;
- background-color: #333;
+  background-color: #333;
   padding: 00px 0px 0px 0px;
   position: fixed;
   padding-top: 10px;
@@ -36,7 +36,7 @@
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  
+
 }
 
 .wrapper .sidebar ul li a {
@@ -82,9 +82,10 @@
 .wrapper .sidebar .social_media a:hover {
   background-color: #868686;
 }
+
 .wrapper .main_content {
   width: 100%;
- 
+
 }
 
 .wrapper .main_content .headera {
@@ -116,15 +117,18 @@
   bottom: 0;
   margin-inline-start: 180px;
   min-height: 120px;
-  
+
 }
+
 .ftr {
-  margin-inline-start: 13%;
+  margin-inline-start: 5%;
+  margin-inline-end: 2%;
 }
 
 .ftr li {
   color: rgb(138, 138, 138);
 }
+
 .abcs li a {
   text-decoration: none;
   color: rgb(138, 138, 138);
@@ -134,9 +138,25 @@
   color: rgb(255, 246, 246);
   font-size: 17px;
 }
+
 .down {
   margin-inline-start: 25%;
 }
+
+.ftr .row .col .aaa li {
+  cursor: pointer;
+}
+
+.ftr .row .col .aaa li:hover {
+  color: rgb(255, 246, 246);
+  font-size: 17px;
+}
+
+.ftr .row .col .aaa a {
+ text-decoration: none;
+ color: rgb(138, 138, 138);
+}
+
 .down .socl {
   position: relative;
   bottom: 0;
@@ -144,6 +164,7 @@
   transform: translateX(-50%);
   display: flex;
 }
+
 .down .socl a {
   display: block;
   width: 40px;
@@ -162,7 +183,7 @@
 .menupp {
   list-style-type: none;
   padding: 0;
-  background-color:rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
   overflow: hidden;
   font-family: Verdana, sans-serif;
   float: right;
@@ -176,31 +197,34 @@
   font-size: 20px;
   text-decoration: none;
 }
+
 .menupp li a:hover {
   color: rgb(167, 160, 160);
 }
+
 .actively {
   color: rgb(116, 116, 116);
 }
 
 .header {
   /*padding: 10px;*/
-  background-color: #333; background-size: cover;
+  background-color: #333;
+  background-size: cover;
   height: 120px;
   position: relative;
 }
 
 #hname {
   font-size: 30px;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-family: "Josefin Sans", sans-serif;
- 
+
   font-weight: bold;
   text-align: center;
   letter-spacing: 10px;
   padding-top: 10px;
- 
- 
+
+
 }
 
 #login {
@@ -210,6 +234,7 @@
   font-size: 50px;
   color: rgb(218, 213, 213);
 }
+
 #dateandtime {
   position: absolute;
   top: 20px;
@@ -218,9 +243,9 @@
   color: rgb(218, 213, 213);
 }
 
-#logott{
+#logott {
   position: fixed;
-margin-top: 4px;
+  margin-top: 4px;
 }
 
 
@@ -230,7 +255,7 @@ margin-top: 4px;
 /*fotter models*/
 
 .ftmodal-body {
-  background-color:hsl(240,100%,35%,0.5)	;
+  background-color: hsl(240, 100%, 35%, 0.5);
   border-color: #5165ff
 }
 
@@ -258,20 +283,21 @@ margin-top: 4px;
   padding-left: 20px
 }
 
-.gg li{
+.gg li {
   cursor: pointer;
 }
-.gg li:hover{
+
+.gg li:hover {
   color: rgb(163, 185, 231);
   font-size: 17px;
 }
 
-.servicetext a{
+.servicetext a {
   text-decoration: none;
   color: white;
 }
 
 .custom-fade .modal-dialog {
-    transform: translateY(-10%);
-    transition: all .2s ease-out;
+  transform: translateY(-10%);
+  transition: all .2s ease-out;
 }
